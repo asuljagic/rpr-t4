@@ -1,40 +1,50 @@
 package ba.unsa.etf;
 
 public class Student {
-    private int brIndexa = 0;
-    private String imeStudenta = "";
-    private Semestar semestar;
 
-    private Student(){};
+	private String ime;
+	private String prezime;
+	private int brojIndexa;
 
-    public int getBrIndexa() {
-        return brIndexa;
-    }
+	public Student(String n,String p,int br){
+		ime=n;
+		prezime=p;
+		brojIndexa=br;
+	}
 
-    public void setBrIndexa(int brIndexa) {
-        this.brIndexa = brIndexa;
-    }
+	public Student(){
+		ime="Niko";
+		prezime="Nikic";
+		brojIndexa=0;
+	}
 
-    public String getImeStudenta() {
-        return imeStudenta;
-    }
+	public String toString(){
 
-    public void setImeStudenta(String imeStudenta) {
-        this.imeStudenta = imeStudenta;
-    }
+		return getPrezime()+" "+getIme()+" ("+getBrojIndexa()+")";
+	}
 
-    public Semestar getSemestar() {
-        return semestar;
-    }
+	public int getBrojIndexa() {
+		return brojIndexa;
+	}
 
-    public void setSemestar(Semestar semestar) {
-        this.semestar = semestar;
-    }
+	public void setBrojIndexa(int brojIndexa) {
+		this.brojIndexa = brojIndexa;
+	}
 
-    public Student (Student s){};
-    public String ispisi(){
-        return null;
-    }
+	public String getIme() {
+		return ime;
+	}
 
-    public void Izborni(IzborniPredmet p){};
+	public void setIme(String ime) {
+		this.ime = ime;
+	}
+
+	public String getPrezime() {
+		return prezime;
+	}
+
+	public void setPrezime(String prezime) {
+		this.prezime = prezime;
+	}
+
 }
